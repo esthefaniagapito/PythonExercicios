@@ -1,0 +1,7 @@
+# Realizar a leitura de um número e exibir seu antecessor e seu sucessor
+
+n1 = int(input('Digite um número:'))
+antecessor = n1 - 1
+sucessor = n1 + 1
+
+print('O sucessor de {} é {} e seu antecessor é {}'.format(n1, sucessor, antecessor))
