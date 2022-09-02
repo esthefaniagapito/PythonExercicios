@@ -1,0 +1,74 @@
+Exercícios feitos no job
+
+####### IMC ########
+peso = float(input('Peso: '))
+altura = float(input('Altura: '))
+imc = peso / (altura ** 2)
+
+print('O IMC dessa pessoa é de {:.2f}'.format(imc))
+
+if imc < 18.5:
+    print('Abaixo do peso')
+elif imc >= 18.5 and imc < 25:
+    print('Peso ideal')
+elif imc >= 15 and imc < 30:
+    print('Sobrepeso')
+elif imc >= 30 and imc < 40:
+    print('Obsedidade')
+else:
+    print('Obesidade Mórbida')
+    
+    
+ ##### Ex das formas de pagamento
+    
+produto = float(input('Valor do produto:'))
+msg = print('''Digite a opção de pagamento: 
+ 1 (Dinheiro ou Cheque), 
+ 2 (Cartão à vista), 
+ 3 (Crédito 2x.), 
+ 4 (Crédito 3x).''')
+opcao_pg = int(input('Opção:'))
+pg_dinheiro_cheque = (produto - (produto * 0.10))
+pg_cartao_1x = (produto - (produto * 0.05))
+pg_cartao_2x = produto
+pg_cartao_3x = ((produto * 0.20) + produto)
+
+if opcao_pg == 1:
+    print('Total a pagar: {:.2f}'.format(pg_dinheiro_cheque))
+elif opcao_pg == 2:
+    print('Total a pagar: {:.2f}'.format(pg_cartao_1x))
+elif opcao_pg == 3:
+    print('Total a pagar: {:.2f}'.format(pg_cartao_2x))
+elif opcao_pg == 4:
+    print('Total a pagar: {:.2f}'.format(pg_cartao_3x))
+else:
+    print('Digite uma opção válida.')
+    
+### EXERCÍCIO JOKENPO
+    
+    import random
+
+msg = print('''Suas opções:
+1 - PEDRA
+2 - PAPEL
+3 - TESOURA''')
+opcao_jogador = int(input('Opção: '))
+
+lista = ['pedra', 'papel', 'tesoura']
+jogada_computador = random.choice(lista)
+
+if opcao_jogador == 1 and jogada_computador == 'papel':
+    print('O jogador jogou PEDRA e o computador jogou PAPEL')
+    print('O computdor venceu!')
+elif opcao_jogador == 1 and jogada_computador == 'tesoura':
+    print('O jogador venceu!')
+elif opcao_jogador == 2 and jogada_computador == 'pedra':
+    print('O jogador venceu!')
+elif opcao_jogador == 2 and jogada_computador == 'tesoura':
+    print('O computador venceu')
+elif opcao_jogador == 3 and jogada_computador == 'pedra':
+    print('O computador venceu')
+elif opcao_jogador == 3 and jogada_computador == 'papel':
+    print('O jogador venceu')
+elif opcao_jogador == jogada_computador:
+    print('empate')
