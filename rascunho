@@ -72,3 +72,72 @@ elif opcao_jogador == 3 and jogada_computador == 'papel':
     print('O jogador venceu')
 elif opcao_jogador == jogada_computador:
     print('empate')
+    
+    # EX contagem regressiva de fogos
+ from time import sleep
+# -*- coding: utf-8 -*-
+
+# contagem regressiva de 10 a 0
+
+contagem = range(10, -1, -1)
+
+for i in contagem:
+    print(i)
+    sleep(1)
+print('FELIZ ANO NOVO!')  
+    
+    # Crie um programa que mostre na tela todos 
+# os números pares que estão no intervalo entre 1 e 50.
+
+
+for par in range(1, 51):
+    if par % 2 == 0:
+        print(par)
+        
+# encurtando as repetições
+# realiza o mesmo processo, mas de forma mais eficiente
+# consumindo menos memória
+
+for i in range(2, 51, 2):
+    print(i)
+    
+
+# Faça um programa que calcule a soma entre todos os números 
+# que são múltiplos de três e que se encontram no intervalo 
+# de 1 até 500.
+soma = 0
+cont = 0
+for i in range(1, 500, 2):
+    if i % 3 == 0:
+        cont += 1
+        soma += i
+print('A soma de todos os valores é {}'.format(soma))
+print('O total de números somados foi de {}'.format(cont))
+
+# Refaça o DESAFIO 9, 
+# mostrando a tabuada de um número que o usuário escolher,
+# só que agora utilizando um laço for.
+
+num = int(input('Digite um número:'))
+for i in range(1, 11):
+    print('{} x {} = {}'.format(num, i, num * i))
+    
+    
+# Desenvolva um programa que leia seis números inteiros 
+# e mostre a soma apenas daqueles que forem pares. 
+# Se o valor digitado for ímpar, desconsidere-o.
+
+a = int(input('N1: '))
+b = int(input('N2: '))
+c = int(input('N3: '))
+d = int(input('N4: '))
+e = int(input('N5: '))
+f = int(input('N6: '))
+
+lista = [a, b, c, d, e, f]
+soma = 0
+
+for i in lista:
+    if i % 2 == 0:
+        soma += i
+print(soma)        
