@@ -140,4 +140,36 @@ soma = 0
 for i in lista:
     if i % 2 == 0:
         soma += i
-print(soma)        
+print(soma) 
+
+## Aulas while
+ex 53
+# Faça um programa que leia o sexo de uma pessoa, mas só aceite os valores ‘M’ ou ‘F’. Caso esteja errado, peça a digitação novamente até ter um valor correto.
+sexo = str(input('Informe seu sexo:[M/F]: ')).strip().upper()[0]
+while sexo not in 'MmFf':
+    sexo = str(input('Dados inválidos. Por favor, informe seu sexo: ')).strip().upper()[0]
+print('Sexo {} registrado com sucesso!'.format(sexo))
+
+
+##
+
+# Melhore o jogo do DESAFIO 28 onde o computador vai “pensar” em um número entre 0 e 10. 
+# Só que agora o jogador vai tentar adivinhar até acertar, mostrando no final quantos palpites foram necessários para vencer.
+from random import randint
+computador = randint(0, 10)
+print('Acabei de pensar em um número entre 0 e 10.')
+print('Será que você consegue adivinha qual foi?')
+acertou = False
+palpites = 0
+while not acertou:
+    jogador = int(input('Qual é seu palpite? '))
+    palpites += 1
+    if jogador == computador:
+        acertou = True
+    else:
+        if jogador < computador:
+            print('Mais...')
+        elif jogador > computador:
+            print('Menos...')
+print('Acertou com {} tentativas'.format(palpites))  
+
