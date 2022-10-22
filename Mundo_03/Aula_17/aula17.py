@@ -25,12 +25,19 @@ print(lanche[2:])
 # Começa do ponto invertido e vai até o final
 print(lanche[-3:])
 
+"""
+Preciso mainipular apenas o conteúdo, do jeito mais simples.
+"""
 print('=' * 30)
 for comida in lanche:
     print(f'Eu vou comer {comida}')
 print('Comida pra caramba!')
 print('=' * 30)
 
+"""
+Preciso manipular o conteúdo também posso usar o range
+que já havia sido estudado
+"""
 # Tamanho/comprimento da tupla = 4
 print(len(lanche))
 # O cont é o número do índice, se eu peço para exibir lanche[cont]
@@ -40,14 +47,21 @@ for cont in range(0, len(lanche)):
 
 print()
 print('=' * 30)
+
+"""
+Caso além do conteúdo eu precise do index AINDA usando range
+"""
 # Preciso escrever a posição:
 # Jeito simples:
 for cont in range(0, len(lanche)):
     print(f'Eu vou comer {lanche[cont]} na posição {cont}')
 
+"""
+Preciso manipular o conteúdo e o index do jeito python: ENUMERATE
+"""
 # Utilizando enumarate
 print('=' * 30)
-for pos, comida in enumerate(lanche):
+for pos, comida in enumerate(lanche): # pos = posição (index), comida = (conteúdo)
     print(f'Eu vou comer {comida} na posição {pos}')
 
 print('=' * 30)

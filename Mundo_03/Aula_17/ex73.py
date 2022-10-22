@@ -17,8 +17,8 @@ tabela_times = ('Palmeiras', 'Santos', 'Vasco', 'Grêmio', 'Flamenggo',
                 'Vitória')
 # Os 5 primeiros times.
 print('='*40)
-for pos, time in enumerate(tabela_times[0:6]):
-    print(f'O time na posição {pos} é {time}.')
+for pos, time in enumerate(tabela_times[0:5]):
+    print(f'O time na posição {pos + 1} é {time}.')
 
 print('='*40)
 # Os últimos 4 colocados.
