@@ -27,11 +27,13 @@ print('-=' * 35)
 print(f'Os dados foram {princ}.')
 print(f'Ao todo você cadastrou {len(princ)} pessoas')
 print(f'O maior peso foi {maior}kg. Peso de ', end='')
-for p in princ:
-    if p[1] == maior: # índice 1, pois o índice zero é o nome
-        print(f'{p[0]}.', end='') # nome
+for p in princ: # primeiro eu entro do índice geral
+    # Depois de entrar no índice gera, entro nos indices dentro dele
+    # No caso temo 0 = nome e 1 = peso
+    if p[1] == maior: # verificamos se no índice que leva o peso é igual ao maior
+        print(f'{p[0]}.', end='') # Se for, eu mostro o(s) nomes associados.
 print()
-print(f'O menor peso foi {menor}kg. Peso de ', end='')
+print(f'O menor peso foi {menor}kg. Peso de ', end='') # repete o processo acima.
 for p in princ:
     if p[1] == menor:
         print(f'{p[0]}.', end='')

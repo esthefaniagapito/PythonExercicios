@@ -1,5 +1,5 @@
 # Criando primeira lista
-teste = list()
+teste = list() # ou []
 teste.append('Gustavo')
 teste.append(40)
 
@@ -48,3 +48,32 @@ for p in galera3:
         print(f'{p[0]} é menor de idade.')
         tomen += 1
 print(f'Temos {totmai} maiores de idade e {tomen} menores de idade.')
+
+"""
+Não confundor cópia de lista com ligação entre lista
+"""
+a = [1, 2, 3, 4]
+b = a
+b[2] = 8
+print(a)
+print(b)
+
+"""
+Out put: 
+[1, 2, 8, 4]
+[1, 2, 8, 4]
+
+No exemplo acima estamos LIGANDO ambas a listas, logo se modificar uma afeta a outra.
+Se b recebesse uma cópia de a[:], a permaneceria em seu estado original e apenas b, com
+os dados copiados de a receberia 8 em b[2]. 
+"""
+
+
+
+
+
+
+
+
+
+
